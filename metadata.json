@@ -1,0 +1,6 @@
+{
+  "name": "TradingView Markets",
+  "description": "Global markets overview with live ticker bar, indices, stocks, crypto, forex tables, and Black Friday promotion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

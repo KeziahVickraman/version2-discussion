@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Trebuchet MS", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --color-tv-blue: #2962FF;
+  --color-tv-dark: #131722;
+  --color-tv-gray: #787B86;
+  --color-tv-green: #089981;
+  --color-tv-red: #f23645;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #f2f3f5;
+    color: #131722;
+  }
+}
+
+.bf-title-gradient {
+  background: linear-gradient(90deg, #ff2a5f 0%, #ff5e2b 50%, #ff8a00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bf-sub-gradient {
+  background: linear-gradient(90deg, #ff3b5c 0%, #ff7b00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bf-btn-gradient {
+  background: linear-gradient(90deg, #ff2a5f 0%, #ff6b00 100%);
+  box-shadow: 0 8px 24px -4px rgba(255, 68, 51, 0.45);
+}
+
+.bf-btn-gradient:hover {
+  background: linear-gradient(90deg, #ff3b6b 0%, #ff7d1a 100%);
+  box-shadow: 0 10px 28px -4px rgba(255, 68, 51, 0.6);
+}
+
+.nav-badge-gradient {
+  background: linear-gradient(105deg, #f74b7b 0%, #ff7d26 100%);
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 38s linear infinite;
+}
+
+.ticker-container:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation: none;
+  }
+}
+
+.cosmic-modal-bg {
+  background-color: #05060a;
+  background-image:
+    radial-gradient(circle at 50% 52%, rgba(0, 0, 0, 1) 18%, rgba(12, 8, 16, 0.92) 26%, rgba(255, 102, 0, 0.28) 34%, rgba(180, 45, 25, 0.14) 48%, rgba(5, 6, 10, 0.96) 72%),
+    radial-gradient(ellipse 115% 42% at 50% 54%, rgba(255, 145, 45, 0.42) 0%, rgba(255, 68, 34, 0.22) 38%, rgba(10, 12, 22, 0) 72%),
+    radial-gradient(circle at 20% 25%, rgba(255, 255, 255, 0.08) 0%, transparent 1.5%),
+    radial-gradient(circle at 82% 20%, rgba(255, 255, 255, 0.07) 0%, transparent 1.5%),
+    radial-gradient(circle at 15% 75%, rgba(255, 255, 255, 0.06) 0%, transparent 1.2%),
+    radial-gradient(circle at 88% 78%, rgba(255, 255, 255, 0.08) 0%, transparent 1.5%);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.65);
+}
+
+.accretion-ring {
+  background: radial-gradient(ellipse 90% 30% at 50% 50%, transparent 46%, rgba(255, 138, 36, 0.35) 54%, rgba(255, 60, 40, 0.18) 64%, transparent 76%);
+  transform: rotate(-11deg);
+  filter: blur(8px);
+}
+
